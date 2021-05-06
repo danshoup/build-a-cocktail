@@ -102,14 +102,13 @@ function displayRecipe(data) {
     //logs cocktail name and add it as a bolded list item element inside ul
     cocktailName = $('<li></li>').text(recipeDetails.strDrink).css("font-weight", "bold").css("list-style", "none");
     cocktailList.append(cocktailName);
-    console.log(recipeDetails.strDrink);
     
     for (i = 1; i < 15; i++) {
         // assigns key for ingredient number to string (i.e. strIngredient1 is the key for the value of "Lime")
         ingredientNum = "strIngredient" + i
-        // runs loop if the ingredient doesn't return null
+        // runs loop if the ingredient at ingredientNum key doesn't return null
         if (recipeDetails[ingredientNum]) {
-            console.log(recipeDetails[ingredientNum])
+            // creates list item with indredient text and appends to ul container under cocktail name
             ingredientItem = $('<li></li>').text(recipeDetails[ingredientNum])
             cocktailList.append(ingredientItem)
         } else {
@@ -118,8 +117,7 @@ function displayRecipe(data) {
         }
     }
 
-    //logs recipe instructions
-    instructions = $('<li></li>').text(recipeDetails.strInstructions)
+    //displays recipe recipe instructions below ingredients in italics
+    instructions = $('<li></li>').text(recipeDetails.strInstructions).css("font-style", "italic").css("list-style", "none")
     cocktailList.append(instructions)
-    console.log(recipeDetails.strInstructions)
 }
