@@ -68,8 +68,6 @@ $('ul').on("click", function(event) {
     // pulls text from clicked list item
     strCocktail = event.target.textContent;
 
-    console.log(strCocktail);
-
     //gets drink id stored in li element id
     drinkId = event.target.getAttribute('id')
 
@@ -101,7 +99,9 @@ function displayRecipe(data) {
     // pulls recipe details object from single object array, represented as a value of "drinks" key
     recipeDetails = data.drinks[0]
 
-    //logs cocktail name
+    //logs cocktail name and add it as a bolded list item element inside ul
+    cocktailName = $('<li></li>').text(recipeDetails.strDrink).css("font-weight", "bold").css("list-style", "none");
+    cocktailList.append(cocktailName);
     console.log(recipeDetails.strDrink);
     
     for (i = 1; i < 15; i++) {
@@ -110,6 +110,8 @@ function displayRecipe(data) {
         // runs loop if the ingredient doesn't return null
         if (recipeDetails[ingredientNum]) {
             console.log(recipeDetails[ingredientNum])
+            ingredientItem = $('<li></li>').text(recipeDetails[ingredientNum])
+            cocktailList.append(ingredientItem)
         } else {
             // breaks out of loop upon first "null" ingredient
             break
@@ -117,5 +119,7 @@ function displayRecipe(data) {
     }
 
     //logs recipe instructions
+    instructions = $('<li></li>').text(recipeDetails.strInstructions)
+    cocktailList.append(instructions)
     console.log(recipeDetails.strInstructions)
 }
