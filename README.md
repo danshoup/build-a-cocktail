@@ -25,7 +25,7 @@ We will utilize GitHub to practice git branch workflow and pull request as per i
 
 - Uses 'localStorage' to store persistent data.
 
-- Weather Dashboard is deployed at live URL.
+- Page is deployed at live URL.
 
 - Page loads with no errors.
 
