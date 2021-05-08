@@ -1,21 +1,13 @@
 // gets dropdown element
-var spiritDropdown = $('#placeholder-for-spirit-dropdown');
-// gets form surrounding dropdown element
-var spiritForm = $('#placeholder-for-spirit-form-containing-dropdown');
-// gets ul container for cocktail list items
-var cocktailList = $('#cocktails');
+var spiritDropdown = $('#spirit-select');
 
-spiritForm.on('submit', function(event) {
-    event.preventDefault();
+// gets bulma grid container for cocktail list items
+var cocktailList = $('#card-container');
 
-    // gets selected spirit upon submitting form
+//runs on dropdown value change
+spiritDropdown.on('change', function(event) {
+    // gets spirit upon selection
     var spirit = spiritDropdown.val();
-
-    // console.log("----------------")
-    // console.log(spirit.toUpperCase() + " DRINKS")
-    // console.log("----------------")
-
-    
 
     // only runs if item selected
     if (spirit) {
@@ -48,17 +40,39 @@ function displayCocktails(cocktailsData) {
     drinksArray = cocktailsData.drinks
     // loops through array and displays all drinks
     for (i = 0; i < drinksArray.length; i++) {
-        // creats list item for cocktail
-        listItem = document.createElement("li");
-        // adds cocktail text to list item element
-        listItem.textContent = drinksArray[i].strDrink;
-        // gives list item an id equal to cocktailDB drink id
-        listItem.setAttribute("id", drinksArray[i].idDrink)
-        // add cocktail list item to ul container
-        cocktailList.append(listItem);
-        // console logs event to confirm accuracy
-        // console.log(drinksArray[i].strDrink);
+
+        createCard(drinksArray[i]);
     }
+}
+
+function createCard(drink) {
+    //creates elements using bulma framework card classes
+    //1. card container
+    newCard = $('<div></div>').addClass("column is-3").append(
+        // 2. card class div with drink id associated
+        $('<div></div>').addClass("card").attr("id", drink.idDrink).append(
+            //3. figure container for image
+            $('<figure></figure>').addClass("image is-square").append(
+                //4. adds drink image
+                $('<img></img>').attr("src", drink.strDrinkThumb)
+            )
+        ).append(
+            // 5. text content container
+            $('<div></div>').addClass("card-content").append(
+                // 6. content container
+                $('<div></div>').addClass("content").append(
+                    // 7. displays drink name
+                    $('<h5></h5>').text(drink.strDrink)
+                ).append(
+                    // 8. adds button to display modal
+                    $('<button></button>').addClass("button is-info is-light").text("Click For Recipe")
+                )
+            )
+        )
+    )
+
+    cocktailList.append(newCard)
+
 }
 
 // executes upon clicking a cocktail in the list
