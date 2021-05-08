@@ -138,9 +138,11 @@ function displayRecipe(data) {
     //displays recipe recipe instructions in p element below ingredient ul
     $('#instructions').text(recipeDetails.strInstructions)
 
+    //toggles the active state of the model is-active makes it visible
     recipeModal.toggleClass("is-active");
 }
 
+//closes modal when "close" button clicked
 recipeModal.on("click", "#close", function() {
     recipeModal.toggleClass("is-active")
 })
