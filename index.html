@@ -51,21 +51,27 @@
             <div class="content has-text-centered">
                 <h4>Choose your main ingredient:</h4>
                 <div class="select">
-                    <select>
-                    <option>Select...</option>
-                    <option>Vodka</option> 
-                    <option>Gin</option>
-                    <option>Whiskey</option>
-                    <option>Rum</option>
-                    <option>Tequila</option>
+                    <select id="spirit-select">
+                    <option value="">Select...</option>
+                    <option value="vodka">Vodka</option> 
+                    <option value="gin">Gin</option>
+                    <option value="bourbon">Bourbon</option>
+                    <option value="scotch">Scotch</option>
+                    <option value="irish+whiskey">Irish Whiskey</option>
+                    <option value="blended+whiskey">Other Whiskey</option>
+                    <option value="light+rum">Light Rum</option>
+                    <option value="dark+rum">Dark Rum</option>
+                    <option value="spiced+rum">Spiced Rum</option>
+                    <option value="rum">Other Rum</option>
+                    <option value="tequila">Tequila</option>
                     </select>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="columns is-centered has-text-centered is-flex-direction-row is-flex-wrap-wrap">
-        <div class="column is-3">
+    <div id="card-container" class="columns is-centered has-text-centered is-flex-direction-row is-flex-wrap-wrap">
+        <!-- <div class="column is-3">
             <div class="card">
             <figure class="image is-square">
                 <img src="https://bulma.io/images/placeholders/480x480.png">
@@ -107,9 +113,9 @@
 
         <div class="column is-3">
             <div class="card">
-            <figure class="image is-square">
-                <img src="https://bulma.io/images/placeholders/480x480.png">
-            </figure>
+                <figure class="image is-square">
+                    <img src="https://bulma.io/images/placeholders/480x480.png">
+                </figure>
                 <div class="card-content">
                     <div class="content">
                         <h4> Drink Name Here </h4>
@@ -117,148 +123,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="column is-3">
-            <div class="card">
-            <figure class="image is-square">
-                <img src="https://bulma.io/images/placeholders/480x480.png">
-            </figure>
-                <div class="card-content">
-                    <div class="content">
-                        <h4> Drink Name Here </h4>
-                        <a class=" button is-info is-light" href="#">Click For Recipe</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="column is-3">
-            <div class="card">
-            <figure class="image is-square">
-                <img src="https://bulma.io/images/placeholders/480x480.png">
-            </figure>
-                <div class="card-content">
-                    <div class="content">
-                        <h4> Drink Name Here </h4>
-                        <a class=" button is-info is-light" href="#">Click For Recipe</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="column is-3">
-            <div class="card">
-            <figure class="image is-square">
-                <img src="https://bulma.io/images/placeholders/480x480.png">
-            </figure>
-                <div class="card-content">
-                    <div class="content">
-                        <h4> Drink Name Here </h4>
-                        <a class=" button is-info is-light" href="#">Click For Recipe</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="column is-3">
-            <div class="card">
-            <figure class="image is-square">
-                <img src="https://bulma.io/images/placeholders/480x480.png">
-            </figure>
-                <div class="card-content">
-                    <div class="content">
-                        <h4> Drink Name Here </h4>
-                        <a class=" button is-info is-light" href="#">Click For Recipe</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="column is-3">
-            <div class="card">
-            <figure class="image is-square">
-                <img src="https://bulma.io/images/placeholders/480x480.png">
-            </figure>
-                <div class="card-content">
-                    <div class="content">
-                        <h4> Drink Name Here </h4>
-                        <a class=" button is-info is-light" href="#">Click For Recipe</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="column is-3">
-            <div class="card">
-            <figure class="image is-square">
-                <img src="https://bulma.io/images/placeholders/480x480.png">
-            </figure>
-                <div class="card-content">
-                    <div class="content">
-                        <h4> Drink Name Here </h4>
-                        <a class=" button is-info is-light" href="#">Click For Recipe</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="column is-3">
-            <div class="card">
-            <figure class="image is-square">
-                <img src="https://bulma.io/images/placeholders/480x480.png">
-            </figure>
-                <div class="card-content">
-                    <div class="content">
-                        <h4> Drink Name Here </h4>
-                        <a class=" button is-info is-light" href="#">Click For Recipe</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="column is-3">
-            <div class="card">
-            <figure class="image is-square">
-                <img src="https://bulma.io/images/placeholders/480x480.png">
-            </figure>
-                <div class="card-content">
-                    <div class="content">
-                        <h4> Drink Name Here </h4>
-                        <a class=" button is-info is-light" href="#">Click For Recipe</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="column is-3">
-            <div class="card">
-            <figure class="image is-square">
-                <img src="https://bulma.io/images/placeholders/480x480.png">
-            </figure>
-                <div class="card-content">
-                    <div class="content">
-                        <h4> Drink Name Here </h4>
-                        <a class=" button is-info is-light" href="#">Click For Recipe</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="column is-3">
-            <div class="card">
-            <figure class="image is-square">
-                <img src="https://bulma.io/images/placeholders/480x480.png">
-            </figure>
-                <div class="card-content">
-                    <div class="content">
-                        <h4> Drink Name Here </h4>
-                        <a class=" button is-info is-light" href="#">Click For Recipe</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        </div> -->
 
     </div>
 
