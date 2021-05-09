@@ -10,13 +10,24 @@ var ingredientList = $('#ingList')
 // gets modal element
 var recipeModal = $('#recipeModal')
 
+// gets JSON string of saved cocktails from storage
+// and converts to array or creates empty array if none saved
+var savedCocktails = localStorage.getItem("savedCocktails");
+if (!savedCocktails) {
+    savedCocktails = [];
+} else {
+    savedCocktails = JSON.parse(savedCocktails);
+}
+
 //runs on dropdown value change
 spiritDropdown.on('change', function(event) {
     // gets spirit upon selection
     var spirit = spiritDropdown.val();
 
     // only runs if item selected
-    if (spirit) {
+    if (spirit === "saved") {
+        getSaved(savedCocktails);
+    } else if (spirit) {
         getCocktails(spirit);
     }
 })
@@ -49,8 +60,6 @@ function displayCocktails(cocktailsData) {
 
         createCard(drinksArray[i]);
     }
-
-    console.log($('.card'))
 }
 
 function createCard(drink) {
@@ -118,8 +127,11 @@ function displayRecipe(data) {
     // pulls recipe details object from single object array, represented as a value of "drinks" key
     recipeDetails = data.drinks[0]
 
+    //gives modal data-id to be used for localstorage
+    recipeModal.attr("data-id", recipeDetails.idDrink)
+
     //updates modal with cocktail name
-    $('p.modal-card-title').text(recipeDetails.strDrink);
+    $('p.modal-card-title').text(recipeDetails.strDrink);   
     
     for (i = 1; i < 15; i++) {
         // assigns key for ingredient number to string (i.e. strIngredient1 is the key for the value of "Lime")
@@ -146,3 +158,43 @@ function displayRecipe(data) {
 recipeModal.on("click", "#close", function() {
     recipeModal.toggleClass("is-active")
 })
+
+// on clicking save button...
+recipeModal.on("click", "#save", function() {
+    drinkId = recipeModal.attr("data-id")
+    // adds cocktail id to array of saved cocktail ids if id not already in array
+    if (!savedCocktails.includes(drinkId)) {
+        savedCocktails.push(drinkId);
+        localStorage.setItem("savedCocktails", JSON.stringify(savedCocktails))
+        // displays notification when saving
+        $('#instructions').parent().append($('<p></p>').attr("id", "result").text("Saved").css('font-style', 'italic'))
+    } else {
+        $('#instructions').parent().append($('<p></p>').attr("id", "result").text("Already saved").css('font-style', 'italic'))
+    }
+    // removes saving notification
+    setTimeout(function() {
+        $('#result').remove()
+    }, 1500)
+})
+
+// iterates through saved cocktails and makes an api call and a card for each one
+function getSaved(savedCocktails) {
+    // clears display area on initial call
+    cocktailList.html('')
+
+    for (i = 0; i < savedCocktails.length; i++) {
+        var apiUrl = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=' + savedCocktails[i];
+
+        fetch(apiUrl)
+            .then(function (response) {
+                if (response.ok) {
+                    response.json().then(function (data) {
+                        // data is json object with drink: array of drink objects with only 1 drink of specified id
+                        // creates card based on that drink
+                        createCard(data.drinks[0]);
+                })
+            }
+        })
+    }
+
+}
