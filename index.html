@@ -64,6 +64,7 @@
                     <option value="spiced+rum">Spiced Rum</option>
                     <option value="rum">Other Rum</option>
                     <option value="tequila">Tequila</option>
+                    <option value="saved">Saved Cocktails</option>
                     </select>
                 </div>
             </div>
@@ -104,8 +105,9 @@
                                         <button class="button is-info-light">Close</button>
                                     </footer>
                                 </div>
-                          </div>
+                            </div>
                     
+                        </div>
                     </div>
                 </div>
             </div>
@@ -125,6 +127,27 @@
             </div>
         </div> -->
 
+    </div>
+
+    <!-- modal element exists on page as hidden until is-active class added -->
+    <div class="modal" id="recipeModal" data-id="">
+        <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title"></p>
+                </header>
+                <section class="modal-card-body">
+                    <ul id="ingList"></ul> 
+                    <hr>
+                    <h6>Mixing instructions:</h6>
+                    <p id="instructions"></p>
+                </section>
+                <footer class="modal-card-foot">
+                    <button id="save" class="button is-info">Save Recipe</button>
+                    <button id="close" class="button is-info-light">Close</button>
+                </footer>
+            </div>
+        </div>
     </div>
 
 
