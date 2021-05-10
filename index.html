@@ -21,7 +21,7 @@
   </head>
   
 <!-- Our Build-A-Cocktail Page -->
-<body>
+<body class="has-background-grey">
     <!-- Header section -->
     <header>
     <section class="hero is-medium is-info">
@@ -40,8 +40,8 @@
     </header>
 
     <!-- Separator with tagline -->
-    <div class="box">
-    <p class="is-italic has-text-centered">
+    <div class="box has-background-grey-light">
+    <p class="is-italic has-text-centered has-text-light">
         <span class="tag is-primary">New</span> Choose the main ingredient for your cocktail...the recipes will magically appear!
     </p>
     </div>
@@ -50,7 +50,7 @@
     <div class="columns is-centered">
         <div class="column is-4">
             <div class="content has-text-centered">
-                <h4>Choose your main ingredient:</h4>
+                <h4 class="has-text-light">Choose your main ingredient:</h4>
                 <div class="select">
                     <select id="spirit-select">
                     <option value="">Select...</option>
@@ -65,6 +65,7 @@
                     <option value="spiced+rum">Spiced Rum</option>
                     <option value="rum">Other Rum</option>
                     <option value="tequila">Tequila</option>
+                    <option value="saved">Saved Cocktails</option>
                     </select>
                 </div>
             </div>
@@ -105,8 +106,9 @@
                                         <button class="button is-info-light">Close</button>
                                     </footer>
                                 </div>
-                          </div>
+                            </div>
                     
+                        </div>
                     </div>
                 </div>
             </div>
@@ -126,6 +128,27 @@
             </div>
         </div> -->
 
+    </div>
+
+    <!-- modal element exists on page as hidden until is-active class added -->
+    <div class="modal" id="recipeModal" data-id="">
+        <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title"></p>
+                </header>
+                <section class="modal-card-body">
+                    <ol id="ingList"></ol> 
+                    <hr>
+                    <h6>Mixing instructions:</h6>
+                    <p id="instructions"></p>
+                </section>
+                <footer class="modal-card-foot">
+                    <button id="save" class="button is-info">Save Recipe</button>
+                    <button id="close" class="button is-info-light">Close</button>
+                </footer>
+            </div>
+        </div>
     </div>
 
 
