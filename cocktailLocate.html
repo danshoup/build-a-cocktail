@@ -37,17 +37,17 @@
 
         <section class="zip-code">
             <div class="columns features">
-                <div class="column is-4">
-                    <input class="input is-info is-5" type="text" placeholder="Enter Zip Code">
+                <form class="column is-4">
+                    <input id="zipInput" class="input is-info is-5" type="text" placeholder="Enter Zip Code">
                     <div class="control">
-                        <button class="button is-info">Submit</button>
+                        <button id="submitBtn" class="button is-info" type="submit">Submit</button>
                     </div>
-                </div>
+                </form>
             </div>
         </section>   
 
-        <section class="cards">
-                <div class="column is-4">
+        <section id="card-container" class="cards">
+                <!-- <div class="column is-4">
                     <div class="card">
                         <div class="card-content">
                             <div class="content">
@@ -136,6 +136,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </section>
+
+        <!-- jQuery script -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <!-- Our javascript file -->
+        <script src="./assets/js/locator.js"></script>
     </body>
