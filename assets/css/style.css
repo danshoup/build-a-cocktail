@@ -31,7 +31,6 @@
     font-family: "Cormorant", sans-serif;
     font-size: 80px;
     filter: blur(0);
-    margin-top: 24px;
 }
 
 .columns.features {
@@ -68,3 +67,6 @@ strong {
     height: 125px;
 }
 
+.modal-card-body {
+    padding: 50px;
+}
