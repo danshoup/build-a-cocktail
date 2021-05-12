@@ -12,9 +12,9 @@ We will utilize GitHub to practice git branch workflow and pull request as per i
 ### Livepage Link
 [Build-A-Cocktail Page](https://danshoup.github.io/build-a-cocktail/)
 
-### Weather Dashboard Screenshot
+### SIP App Screenshot
 
-![Application Screen Shot](./assets/images/)
+![SIP App Screen Shot](./assets/images/sipScreenshotTemp.png)
 
 ### Acceptance Criteria Summary
 
