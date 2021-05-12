@@ -10,6 +10,12 @@ var ingredientList = $('#ingList')
 // gets modal element
 var recipeModal = $('#recipeModal')
 
+// get saved cocktail button from navbar
+var savedBtn = $('#saved')
+
+// get clear saved cocktail button from navbar
+var clearBtn = $('#clear')
+
 // gets JSON string of saved cocktails from storage
 // and converts to array or creates empty array if none saved
 var savedCocktails = localStorage.getItem("savedCocktails");
@@ -20,16 +26,27 @@ if (!savedCocktails) {
 }
 
 //runs on dropdown value change
-spiritDropdown.on('change', function(event) {
+spiritDropdown.on('change', function() {
     // gets spirit upon selection
     var spirit = spiritDropdown.val();
 
     // only runs if item selected
-    if (spirit === "saved") {
-        getSaved(savedCocktails);
-    } else if (spirit) {
+    if (spirit) {
         getCocktails(spirit);
     }
+})
+
+
+savedBtn.on('click', function(event) {
+    event.preventDefault();
+    getSaved(savedCocktails);
+})
+
+clearBtn.on('click', function(event) {
+    event.preventDefault();
+    localStorage.clear();
+    savedCocktails = [];
+    cocktailList.html('')
 })
 
 // fetches data from api based on selected spirit
