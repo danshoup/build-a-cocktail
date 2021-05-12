@@ -1,46 +1,36 @@
-# Unit 07: Project 1
+## SIP Web Application
 
-Group API project using CSS and JavaScript to build an application for building a cocktail with chosen ingredients.
-## Creating a Build-A-Cocktail Web Application
+SIP, or Spirit Index Program, is a web application that utilizes TheCocktailDB API and Yelp Fusion API to search for cocktails using a base liquor (vodka, rum, gin, whisky, etc.) as well as searching for local bars that serve cocktails if you don't feel like making a cocktail at home!
 
-This is the first group project for the MSU Coding BootCamp.  Working in a small group, we will build a web application from the ground up using the JavaScript and CSS skills we have learned up to this point. We will create a and design an aplication that allows the user to select from a list of drink ingredients and have a recipes displayed that use chosen ingredients, using data from a server-side API.  
+The landing page is the cocktail search page. Using a dropdown to select the base liquor, results are loaded from TheCocktailDB API and displayed with the cocktail name and a picture of the cocktail. When you click on a cocktail, a modal appears containing the cocktail ingredients and mixing instructions. There is also an option to save a selected cocktail to your local storage to access again later.
 
-We will utilize GitHub to practice git branch workflow and pull request as per industry standards. 
-​
+A link to a "cocktail locator" page will bring you to a similar page, but with an input for a zipcode so that users can enter their zipcode and search for bars in the area utilizing the Yelp API. This page brings up a list of results including the name of the bar and its address
 
+## Features
+
+Search database for cocktails based on a liquor
+View cocktail name and picture of cocktail
+View cocktail ingredients and mixing instructions
+Save viewed cocktails to look at later
+Search for local bars using zipcode
+View name, address, and phone numbers of bars in zipcode
 
 ### Livepage Link
 [Build-A-Cocktail Page](https://danshoup.github.io/build-a-cocktail/)
 
-### SIP App Screenshot
+### SIP Homepage Screenshot
 
-![SIP App Screen Shot](./assets/images/sipScreenshotTemp.png)
+![Application Screen Shot](./assets/images/sipScreenshotTemp.png)
 
-### Acceptance Criteria Summary
+### Resources
 
+Bulma (https://bulma.io/)
+TheCocktailDB API (https://www.thecocktaildb.com/)
+Yelp Fusion API (https://www.yelp.com/developers/documentation/v3)
 
-### Other Criteria
+### Contributors
 
-
-
-- Uses 'localStorage' to store persistent data.
-
-- Page is deployed at live URL.
-
-- Page loads with no errors.
-
-- GitHub URL submitted.
-
-- GitHub repository contains appropriate code.
-
-- User experience is intuitive and easy to navigate.
-
-- User interface is clean and polished.
-
-- Applicateion resembles the mock-up and above criteria functionality.
-
-- Repository has a unique name, and follows best practices for file structure and naming conventions.
-
-- Quality README.md file with a description, screenshot, and link to deployed app.
-
-- Repository includes manifold descriptive commit messages.
+Daniel Schoup (github: danshoup)
+Jamie Kuras (github: jkur16)
+Curtis Drullinger (github: Curtisaurus)
+Emily Tassoni (github: tassoni13)
