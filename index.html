@@ -122,8 +122,30 @@
         </div>
     </div>
 
+    <!-- modal element exists on page as hidden until is-active class added -->
+    <div class="modal" id="recipeModal" data-id="">
+        <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title"></p>
+                </header>
+                <section class="modal-card-body">
+                    <ul id="ingList"></ul> 
+                    <hr>
+                    <h6>Mixing instructions:</h6>
+                    <p id="instructions"></p>
+                </section>
+                <footer class="modal-card-foot">
+                    <button id="save" class="button is-info">Save Recipe</button>
+                    <button id="close" class="button is-info-light">Close</button>
+                </footer>
+            </div>
+        </div>
+    </div>
 
-<!-- Font Awesome script -->
+
+      
+    <!-- Font Awesome and jQuery script -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <!-- Our javascript file -->
