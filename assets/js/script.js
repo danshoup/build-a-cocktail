@@ -47,7 +47,7 @@ function getCocktails(selectedSpirit) {
                     displayCocktails(data)
                 })
             }
-        })
+        })  
 }
 
 function displayCocktails(cocktailsData) {
