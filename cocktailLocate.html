@@ -17,29 +17,54 @@
     <title>Locate-A-Cocktail</title>
     </head>
 
-    <body>
-        <header>
-        <section class="hero is-medium is-primary">
-            <!-- Hero content: will be in the middle -->
-            <div class="hero-body">
-                <div class="background-image"></div>
-            <div class="container">
-                <div class="title">
-                    S.I.P.
-                </div>
-                <div class="hero-subtitle">
-                A <strong>S</strong>pirit <strong>I</strong>ndex <strong>P</strong>rogram that helps you find the perfect cocktail
-                </div>
-            </div>
-            </div>
-        </section>
-        </header>
+    <body class="has-background-grey">
+            <!-- Navbar -->
+    <nav class="navbar has-background-grey-light" role="navigation" aria-label="main navigation">
 
+        <div class="navbar-brand">
+          <a class="navbar-item">
+            <img class="ml-3" src="./assets/images/PikPng.com_martini-glass-vector-png_3795023.png" width="35" height="35">
+          </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item" href="./index.html">
+                    <button class="button is-ghost has-text-black">Home</button>
+                </a>
+                <a class="navbar-item" href="./cocktailLocate.html">
+                    <button class="button is-ghost has-text-black">Take Me to a Bartender...</button>
+                </a>
+                <a class="navbar-item">
+                    <button class="button is-ghost has-text-black">Saved Cocktails</button>
+                </a>
+            </div>
+        </div>
+      </nav>
+
+    <!-- Header section -->
+
+        <header>
+            <section class="hero is-medium">
+                <div class="hero-body">
+                    <div class="background-image"></div>
+                    <div class="container has-text-centered pt-4 mt-6">
+                        <p class="title has-text-light">
+                            Sip
+                        </p>
+                        <p class="hero-subtitle has-text-light">
+                            A <strong class="has-text-light">S</strong>pirit <strong class="has-text-light">I</strong>ndexing <strong class="has-text-light">P</strong>rogram that helps you find the perfect cocktail.
+                        </p> 
+                    </div>
+                </div>
+            </section>
+            </header>
+        <!-- Input section for zip code -->
         <section class="zip-code">
             <div class="columns features">
                 <form class="column is-4">
-                    <input id="zipInput" class="input is-info is-5" type="text" placeholder="Enter Zip Code">
-                    <div class="control">
+                    <input id="zipInput" class="input is-info is-4" type="text" placeholder="Enter Zip Code">
+                    <div class="control p-2">
                         <button id="submitBtn" class="button is-info" type="submit">Submit</button>
                     </div>
                 </form>
@@ -47,96 +72,7 @@
         </section>   
 
         <section id="card-container" class="cards">
-                <!-- <div class="column is-4">
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="content">
-                                Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="column is-4">
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="content">
-                                Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="column is-4">
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="content">
-                                Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="column is-4">
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="content">
-                                Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="column is-4">
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="content">
-                                Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="column is-4">
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="content">
-                                Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="column is-4">
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="content">
-                                Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="column is-4">
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="content">
-                                Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="column is-4">
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="content">
-                                Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
+            <!-- Dynamically inserted cards from JS -->
         </section>
 
         <!-- jQuery script -->
