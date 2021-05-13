@@ -73,7 +73,7 @@ strong {
     flex-wrap: wrap;
 }
 
-.card-content {
+#drink-cards {
     height: 125px;
 }
 
