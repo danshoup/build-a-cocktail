@@ -1,8 +1,14 @@
 
 * {
     font-family: "Poiret One", sans-serif;
+    font-weight: bold;
+
 }
 
+button {
+    font-family: "Poiret One", sans-serif;
+    
+}
 body {
     height: 100%;
     min-height: 100vh;
@@ -46,6 +52,11 @@ body {
 .columns.features {
     padding-top: 20px;
     justify-content: center;
+}
+
+#spirit-select {
+    font-family: "Poiret One", sans-serif;
+    font-weight: bold;
 }
 
 .submit {
