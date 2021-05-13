@@ -18,9 +18,9 @@ View name, address, and phone numbers of bars in zipcode
 ### Livepage Link
 [Build-A-Cocktail Page](https://danshoup.github.io/build-a-cocktail/)
 
-### SIP Homepage Screenshot
+### SIP Demo
 
-![Application Screen Shot](./assets/images/sipScreenshotTemp.png)
+![Application Screen Shot](./assets/images/Sip.gif)
 
 ### Resources
 
