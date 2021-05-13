@@ -14,6 +14,7 @@
       rel="stylesheet"
     />
     <link rel="preconnect" href="https://fonts.gstatic.com">
+
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
     <!-- Our stylesheet -->
     <link rel="stylesheet" href="./assets/css/style.css" />
@@ -40,8 +41,11 @@
                 <a class="navbar-item" href="./cocktailLocate.html">
                     <button class="button is-ghost has-text-black">Take Me to a Bartender...</button>
                 </a>
-                <a class="navbar-item">
+                <a id="saved" class="navbar-item">
                     <button class="button is-ghost has-text-black">Saved Cocktails</button>
+                </a>
+                <a id="clear" class="navbar-item">
+                    <button class="button is-ghost has-text-black">Clear Saved</button>
                 </a>
             </div>
         </div>
@@ -66,7 +70,7 @@
 
     <!-- Separator with tagline -->
     <div class="box has-background-grey-light">
-        <p class="is-italic has-text-centered">
+        <p class="is-italic has-text-centered has-text-weight-bold">
             Choose the main ingredient for your cocktail from the dropdown menu...the recipes will magically appear!
         </p>
     </div>
@@ -90,7 +94,6 @@
                     <option value="spiced+rum">Spiced Rum</option>
                     <option value="rum">Other Rum</option>
                     <option value="tequila">Tequila</option>
-                    <option value="saved">Saved Cocktails</option>
                     </select>
                 </div>
             </div>
