@@ -30,7 +30,7 @@ Yelp Fusion API (https://www.yelp.com/developers/documentation/v3)
 
 ### Contributors
 
-Daniel Schoup (github: danshoup)
+Daniel Shoup (github: danshoup)
 Jamie Kuras (github: jkur16)
 Curtis Drullinger (github: Curtisaurus)
 Emily Tassoni (github: tassoni13)
