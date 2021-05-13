@@ -92,7 +92,7 @@ function createCard(drink) {
             )
         ).append(
             // 5. text content container
-            $('<div></div>').addClass("card-content").append(
+            $('<div></div>').addClass("card-content").attr("id", "#drink-cards").append(
                 // 6. content container
                 $('<div></div>').addClass("content").append(
                     // 7. displays drink name
