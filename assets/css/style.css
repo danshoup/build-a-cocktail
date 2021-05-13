@@ -1,3 +1,8 @@
+
+* {
+    font-family: "Poiret One", sans-serif;
+}
+
 body {
     height: 100%;
     min-height: 100vh;
@@ -20,12 +25,12 @@ body {
     padding-top: 30px;
     text-align: center;
     justify-content: center;
-   
-
 }
 
 .hero {
     position: relative;
+
+    text-shadow:1px 0 0 black,0 1px 0 black,-1px 0 0 black,0 -1px 0 black;
 }
 
 .hero.is-medium .hero-body {
@@ -34,7 +39,6 @@ body {
 }
 
 .title {
-    font-family: "Cormorant", sans-serif;
     font-size: 80px;
     filter: blur(0);
 }
@@ -52,12 +56,12 @@ body {
 .hero-subtitle {
     font-size: 20px;
     filter: blur(0);
+    font-weight: bold;
 }
 
 .columns {
     display: flex;
     flex-wrap: wrap;
-
 }
 
 strong {
