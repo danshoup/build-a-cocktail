@@ -99,7 +99,7 @@ function createCard(drink) {
                     $('<h5></h5>').text(drink.strDrink)
                 ).append(
                     // 8. adds button to display modal
-                    $('<button></button>').addClass("button is-info is-light").text("Click For Recipe")
+                    $('<button></button>').addClass("button is-light").text("Click For Recipe")
                 )
             )
         )
